@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>랜덤 CycleGAN 이미지 생성기</title>
+        <style>
+            body,
+            html {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-image: url(/static/images/random_background.jpg);
+                background-size: cover;
+                background-position: center;
+            }
+            .square {
+                position: relative;
+                width: 70%;
+                height: 70%;
+                background-color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .random-img {
+                max-width: 50%;
+                max-height: 50%;
+                cursor: pointer;
+            }
+            h1 {
+                position: absolute;
+                top: 10%; /* 원래는 -30px였으나, 아래로 내리는 효과를 주기 위해 30%로 변경 */
+                width: 100%;
+                text-align: center;
+                color: #333;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="square">
+            <h1>랜덤 CycleGAN 이미지 생성기</h1>
+            <img
+                id="randomImage"
+                class="random-img"
+                src="/result/placeholder.jpg"
+                alt="Random Image"
+                onclick="loadRandomImage()"
+            />
+        </div>
+
+        <script>
+            function loadRandomImage() {
+                fetch("/get_random_image")
+                    .then((response) => response.json())
+                    .then((data) => {
+                        const imgElement =
+                            document.getElementById("randomImage");
+                        imgElement.onerror = () => {
+                            // 이미지 로딩 실패 시 처리
+                            console.error("이미지 로딩 실패");
+                            loadRandomImage(); // 재시도
+                        };
+                        imgElement.src = `/result/${data.image}`;
+                    })
+                    .catch((error) =>
+                        console.error("데이터 로딩 실패:", error)
+                    );
+            }
+            // 페이지 로드 시 최초 이미지 로딩
+            window.onload = loadRandomImage;
+        </script>
+    </body>
+</html>
