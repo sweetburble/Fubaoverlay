@@ -13,6 +13,11 @@
 ![fubao_22](https://github.com/sweetburble/Fubaoverlay/assets/79733289/86223406-5a3a-4efb-8432-77ea91eb705b)
 <br><br><br>
 
+#### 푸바오.. 너는 내 삶에 희망이야
+
+![fubao_25](https://github.com/sweetburble/Fubaoverlay/assets/79733289/436d8609-9642-4fdc-a4b2-12b6db72b3e7)
+<br><br><br>
+
 #### 그러던 어느날, 푸바오가 내 곁을 떠나버렸다
 
 ![fubao_return](https://github.com/sweetburble/Fubaoverlay/assets/79733289/febe48a0-d9ed-4f24-a032-e5ce05906da7)
