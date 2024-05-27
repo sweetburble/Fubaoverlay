@@ -207,5 +207,8 @@ FubaoOverlay는 오픈 소스 프로젝트입니다. 당신의 소중한 의견�
 <https://kyujinpy.tistory.com/65>  
 **※ model_adain.py, train_style_adain.py, apply_style_adain.py 에 AdaIN을 적용한 Neural Style Transfer을 구현했지만, 최종 결과가 더 좋지 않아 소개하지 않았습니다.**
 
+[학습 데이터 제공]
+<https://www.kaggle.com/>
+
 [코딩 및 에러 수정 도우미]
 <https://chat.lmsys.org/>
